@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="description" content="TechAssist - Assistência técnica de informática.">
+
+    <link rel="manifest" href="manifest.json">
+
+    <title>TechAssist - Assistência Técnica</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        nav {
+            background: #084298;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 55px 20px;
+            background: white;
+        }
+
+        .banner h2 {
+            font-size: 28px;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .servicos {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .servicos h2,
+        .contato h2 {
+            margin-bottom: 25px;
+            color: #084298;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #0d6efd;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        .preco {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #198754;
+        }
+
+        .contato {
+            padding: 40px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #084298;
+        }
+
+        footer {
+            background: #084298;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .banner h2 {
+                font-size: 23px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TechAssist</h1>
+        <p>Soluções em Informática e Tecnologia</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="banner" id="inicio">
+        <h2>Bem-vindo à TechAssist!</h2>
+
+        <p>
+            Oferecemos soluções em informática
+            para facilitar seu dia a dia.
+        </p>
+
+        <p>
+            Atendimento especializado,
+            qualidade e confiança.
+        </p>
+    </section>
+
+    <section class="servicos" id="servicos">
+
+        <h2>Nossos Serviços</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Manutenção</h3>
+                <p>
+                    Diagnóstico e manutenção
+                    de computadores e notebooks.
+                </p>
+                <span class="preco">Sob orçamento</span>
+            </div>
+
+            <div class="card">
+                <h3>Formatação</h3>
+                <p>
+                    Formatação, instalação de
+                    sistemas e programas.
+                </p>
+                <span class="preco">Sob orçamento</span>
+            </div>
+
+            <div class="card">
+                <h3>Redes</h3>
+                <p>
+                    Configuração de redes,
+                    internet e roteadores.
+                </p>
+                <span class="preco">Sob orçamento</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contato" id="contato">
+
+        <h2>Solicite um Atendimento</h2>
+
+        <form id="formulario">
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome"
+                placeholder="Digite seu nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone"
+                placeholder="Digite seu telefone" required>
+
+            <label for="servico">Serviço desejado:</label>
+
+            <select id="servico" required>
+                <option value="">Selecione um serviço</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Formatação">Formatação</option>
+                <option value="Redes">Redes</option>
+            </select>
+
+            <label for="mensagem">Descreva seu problema:</label>
+
+            <textarea id="mensagem" rows="4"
+                placeholder="Explique o que aconteceu..."
+                required></textarea>
+
+            <button type="submit">
+                Enviar Solicitação
+            </button>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>© 2026 TechAssist - Todos os direitos reservados.</p>
+        <p>Assistência Técnica de Informática</p>
+    </footer>
+
+    <script>
+        document.getElementById("formulario")
+            .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const telefone = document.getElementById("telefone").value;
+            const servico = document.getElementById("servico").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            const numeroWhatsApp = "5583999999999";
+
+            const texto =
+                "Olá! Gostaria de solicitar um atendimento.%0A%0A" +
+                "Nome: " + encodeURIComponent(nome) + "%0A" +
+                "Telefone: " + encodeURIComponent(telefone) + "%0A" +
+                "Serviço: " + encodeURIComponent(servico) + "%0A" +
+                "Problema: " + encodeURIComponent(mensagem);
+
+            window.open(
+                "https://wa.me/" + numeroWhatsApp + "?text=" + texto,
+                "_blank"
+            );
+
+        });
+    </script>
+
+</body>
+</html>
